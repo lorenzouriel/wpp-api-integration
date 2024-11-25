@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0 
+    hooks:
+      - id: check-yaml # check-yaml: Ensures your YAML files are valid.
+      - id: end-of-file-fixer # end-of-file-fixer: Ensures there’s exactly one newline at the end of files.
+      - id: trailing-whitespace # trailing-whitespace: Removes trailing whitespace from files.
+      - id: debug-statements # debug-statements: Warns about leftover print() or pdb statements.
+  - repo: https://github.com/psf/black
+    rev: 23.9.1 
+    hooks:
+      - id: black # black: Formats your Python code according to the Black code style.
+        language_version: python3
