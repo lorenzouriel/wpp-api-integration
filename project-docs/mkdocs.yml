@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: WhatsApp API Integration
+nav:
+  - Home: index.md
+  - API Documentation:
+      - Introduction: docs/introduction.md
+      - Endpoints: docs/endpoints.md
+theme:
+  name: material
