@@ -14,7 +14,7 @@ def home():
 # Verification endpoint
 @app.route("/webhook", methods=["GET"])
 def verify_webhook():
-    verify_token = "mytoken"
+    verify_token = VERIFY_TOKEN
     mode = request.args.get("hub.mode")
     token = request.args.get("hub.verify_token")
     challenge = request.args.get("hub.challenge")
