@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Environment variables
-VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
+# VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
 
 @app.route('/', methods=['GET'])
 def home():
@@ -48,8 +48,6 @@ def handle_message(message):
     sender_id = message["from"]  # Sender's WhatsApp ID
     text = message.get("text", {}).get("body", "")  # Message text
     print(f"Message from {sender_id}: {text}")
-
-    # You can add logic to send replies using the WhatsApp Business API here.
 
 
 if __name__ == "__main__":

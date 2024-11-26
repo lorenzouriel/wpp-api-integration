@@ -6,10 +6,9 @@ import requests
 load_dotenv()
 
 # Environment variables
-VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
-ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
-PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
-
+# VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
+# ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+# PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
 
 def send_message(recipient_id, message_text):
     url = f"https://graph.facebook.com/v21.0/{PHONE_NUMBER_ID}/messages"
@@ -28,4 +27,4 @@ def send_message(recipient_id, message_text):
 
 
 # Example usage
-send_message("5511947788209", "Hello from the webhook!")
+send_message("5511947788209", "Opa, boa tarde!")
