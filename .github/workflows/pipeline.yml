@@ -25,17 +25,3 @@ jobs:
 
     - name: Run tests  
       run: pytest  
-
-  deploy:  
-    runs-on: ubuntu-latest  
-    needs: build  # Ensures deploy only runs if the build (tests) job succeeds
-    
-    steps:  
-    - uses: actions/checkout@v3  
-
-    - name: Deploy to Render  
-      uses: render-examples/deploy-to-render@v1  
-      with:  
-        render_api_key: ${{ secrets.RENDER_API_KEY }}  # Render API Key as GitHub Secret
-        service_id: ${{ secrets.RENDER_SERVICE_ID }}    # Render Service ID as GitHub Secret
-        branch: main  # You can change this to any branch you deploy from
