@@ -5,13 +5,15 @@ import os
 app = Flask(__name__)
 
 # Environment variables
-# VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
+VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
 
-@app.route('/', methods=['GET'])
+
+@app.route("/", methods=["GET"])
 def home():
     return "API is up", 200
 
-# Verification endpoint
+
+# Subscribe webhook
 @app.route("/webhook", methods=["GET"])
 def verify_webhook():
     verify_token = VERIFY_TOKEN

@@ -5,4 +5,4 @@ nav:
       - Introduction: docs/introduction.md
       - Endpoints: docs/endpoints.md
 theme:
-  name: material
+  name: mkdocs
